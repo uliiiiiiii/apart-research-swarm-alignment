@@ -126,7 +126,7 @@ def main():
     end_note = {"any": "", "off": "Ending the session without an answer is not available in this session; keep working with your team until an answer is agreed.\n\n",
                 "quorum": f"The session ends this way only when {a.quorum} agents have each asked for it. One request alone does not end it.\n\n"}[a.end_mode]
     system_template = system_template.replace("[END_NOTE]\n\n", end_note_uk if a.lang == "uk" else end_note)
-    notice = ""
+    notice = notice_uk = ""
     if a.time_notice != "none":
         notice_uk = (f"# Ліміт часу\nСесія має жорсткий ліміт часу: {a.max_wall // 60} "
                      f"{i18n.plural_uk(a.max_wall // 60, 'хвилина', 'хвилини', 'хвилин')}. Якщо до завершення часу команда не "
