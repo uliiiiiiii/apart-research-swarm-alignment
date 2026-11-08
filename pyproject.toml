@@ -1,0 +1,9 @@
+[project]
+name = "zebra-eval"
+version = "0.2.0"
+description = "Single-agent ZebraLogic pilot harness (Adaption Responses API)"
+requires-python = ">=3.11"
+dependencies = [
+    "adaption>=0.16.0",
+    "z3-solver>=4.12",
+]

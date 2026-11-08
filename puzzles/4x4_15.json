@@ -1,0 +1,171 @@
+{
+ "id": "4x4_15",
+ "n_houses": 4,
+ "n_cats": 4,
+ "n_clues": 11,
+ "seed": "zebra-v1:4x4:15",
+ "categories": {
+  "name": [
+   "Eve",
+   "David",
+   "Alice",
+   "Carol"
+  ],
+  "color": [
+   "purple",
+   "white",
+   "blue",
+   "green"
+  ],
+  "pet": [
+   "bird",
+   "fish",
+   "cat",
+   "rabbit"
+  ],
+  "drink": [
+   "tea",
+   "juice",
+   "soda",
+   "water"
+  ]
+ },
+ "clues": [
+  [
+   "at",
+   [
+    "name",
+    "David"
+   ],
+   4
+  ],
+  [
+   "imm_left",
+   [
+    "pet",
+    "cat"
+   ],
+   [
+    "name",
+    "Alice"
+   ]
+  ],
+  [
+   "not_same",
+   [
+    "pet",
+    "cat"
+   ],
+   [
+    "name",
+    "Carol"
+   ]
+  ],
+  [
+   "next_to",
+   [
+    "name",
+    "Alice"
+   ],
+   [
+    "pet",
+    "rabbit"
+   ]
+  ],
+  [
+   "same",
+   [
+    "drink",
+    "tea"
+   ],
+   [
+    "color",
+    "white"
+   ]
+  ],
+  [
+   "at",
+   [
+    "color",
+    "blue"
+   ],
+   1
+  ],
+  [
+   "same",
+   [
+    "color",
+    "purple"
+   ],
+   [
+    "drink",
+    "water"
+   ]
+  ],
+  [
+   "at",
+   [
+    "name",
+    "Carol"
+   ],
+   1
+  ],
+  [
+   "same",
+   [
+    "name",
+    "Alice"
+   ],
+   [
+    "color",
+    "purple"
+   ]
+  ],
+  [
+   "not_same",
+   [
+    "color",
+    "purple"
+   ],
+   [
+    "pet",
+    "fish"
+   ]
+  ],
+  [
+   "at",
+   [
+    "drink",
+    "juice"
+   ],
+   4
+  ]
+ ],
+ "solution": {
+  "name": [
+   "Carol",
+   "Eve",
+   "Alice",
+   "David"
+  ],
+  "color": [
+   "blue",
+   "white",
+   "purple",
+   "green"
+  ],
+  "pet": [
+   "fish",
+   "cat",
+   "bird",
+   "rabbit"
+  ],
+  "drink": [
+   "soda",
+   "tea",
+   "water",
+   "juice"
+  ]
+ },
+ "prompt": "There are 4 houses in a row, numbered 1 to 4 from left to right. Each house has exactly one resident. Every resident has one value for each attribute below, and no two residents share a value within an attribute.\n\nAttributes and their possible values:\n- name: Eve, David, Alice, Carol\n- color: purple, white, blue, green\n- pet: bird, fish, cat, rabbit\n- drink: tea, juice, soda, water\n\nClues:\n1. David lives in house 4.\n2. The person whose pet is cat lives directly to the left of Alice.\n3. The person whose pet is cat and Carol are not the same person.\n4. Alice and the person whose pet is rabbit live next to each other.\n5. The person whose favorite drink is tea and the person whose favorite color is white are the same person.\n6. The person whose favorite color is blue lives in house 1.\n7. The person whose favorite color is purple and the person whose favorite drink is water are the same person.\n8. Carol lives in house 1.\n9. Alice and the person whose favorite color is purple are the same person.\n10. The person whose favorite color is purple and the person whose pet is fish are not the same person.\n11. The person whose favorite drink is juice lives in house 4.\n\nDetermine which values belong to each house. Submit your answer as JSON with exactly these keys: {\"name\": [...], \"color\": [...], \"pet\": [...], \"drink\": [...]}. Each list has 4 entries, the value in house 1 first and the value in house 4 last."
+}

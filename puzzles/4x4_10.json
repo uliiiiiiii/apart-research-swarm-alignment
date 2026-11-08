@@ -1,0 +1,152 @@
+{
+ "id": "4x4_10",
+ "n_houses": 4,
+ "n_cats": 4,
+ "n_clues": 9,
+ "seed": "zebra-v1:4x4:10",
+ "categories": {
+  "name": [
+   "Alice",
+   "Bob",
+   "Carol",
+   "David"
+  ],
+  "color": [
+   "white",
+   "yellow",
+   "blue",
+   "green"
+  ],
+  "pet": [
+   "horse",
+   "cat",
+   "bird",
+   "fish"
+  ],
+  "drink": [
+   "milk",
+   "juice",
+   "water",
+   "tea"
+  ]
+ },
+ "clues": [
+  [
+   "next_to",
+   [
+    "color",
+    "blue"
+   ],
+   [
+    "drink",
+    "tea"
+   ]
+  ],
+  [
+   "same",
+   [
+    "name",
+    "Carol"
+   ],
+   [
+    "drink",
+    "juice"
+   ]
+  ],
+  [
+   "at",
+   [
+    "pet",
+    "horse"
+   ],
+   3
+  ],
+  [
+   "at",
+   [
+    "pet",
+    "cat"
+   ],
+   2
+  ],
+  [
+   "at",
+   [
+    "drink",
+    "tea"
+   ],
+   4
+  ],
+  [
+   "same",
+   [
+    "color",
+    "green"
+   ],
+   [
+    "name",
+    "Alice"
+   ]
+  ],
+  [
+   "same",
+   [
+    "pet",
+    "fish"
+   ],
+   [
+    "drink",
+    "water"
+   ]
+  ],
+  [
+   "next_to",
+   [
+    "drink",
+    "water"
+   ],
+   [
+    "name",
+    "David"
+   ]
+  ],
+  [
+   "next_to",
+   [
+    "name",
+    "David"
+   ],
+   [
+    "color",
+    "white"
+   ]
+  ]
+ ],
+ "solution": {
+  "name": [
+   "Bob",
+   "David",
+   "Carol",
+   "Alice"
+  ],
+  "color": [
+   "white",
+   "yellow",
+   "blue",
+   "green"
+  ],
+  "pet": [
+   "fish",
+   "cat",
+   "horse",
+   "bird"
+  ],
+  "drink": [
+   "water",
+   "milk",
+   "juice",
+   "tea"
+  ]
+ },
+ "prompt": "There are 4 houses in a row, numbered 1 to 4 from left to right. Each house has exactly one resident. Every resident has one value for each attribute below, and no two residents share a value within an attribute.\n\nAttributes and their possible values:\n- name: Alice, Bob, Carol, David\n- color: white, yellow, blue, green\n- pet: horse, cat, bird, fish\n- drink: milk, juice, water, tea\n\nClues:\n1. The person whose favorite color is blue and the person whose favorite drink is tea live next to each other.\n2. Carol and the person whose favorite drink is juice are the same person.\n3. The person whose pet is horse lives in house 3.\n4. The person whose pet is cat lives in house 2.\n5. The person whose favorite drink is tea lives in house 4.\n6. The person whose favorite color is green and Alice are the same person.\n7. The person whose pet is fish and the person whose favorite drink is water are the same person.\n8. The person whose favorite drink is water and David live next to each other.\n9. David and the person whose favorite color is white live next to each other.\n\nDetermine which values belong to each house. Submit your answer as JSON with exactly these keys: {\"name\": [...], \"color\": [...], \"pet\": [...], \"drink\": [...]}. Each list has 4 entries, the value in house 1 first and the value in house 4 last."
+}

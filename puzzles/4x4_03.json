@@ -1,0 +1,163 @@
+{
+ "id": "4x4_03",
+ "n_houses": 4,
+ "n_cats": 4,
+ "n_clues": 10,
+ "seed": "zebra-v1:4x4:3",
+ "categories": {
+  "name": [
+   "Alice",
+   "David",
+   "Frank",
+   "Eve"
+  ],
+  "color": [
+   "green",
+   "purple",
+   "red",
+   "white"
+  ],
+  "pet": [
+   "cat",
+   "horse",
+   "rabbit",
+   "dog"
+  ],
+  "drink": [
+   "coffee",
+   "water",
+   "juice",
+   "tea"
+  ]
+ },
+ "clues": [
+  [
+   "not_at",
+   [
+    "name",
+    "Frank"
+   ],
+   1
+  ],
+  [
+   "same",
+   [
+    "name",
+    "Alice"
+   ],
+   [
+    "pet",
+    "horse"
+   ]
+  ],
+  [
+   "next_to",
+   [
+    "drink",
+    "tea"
+   ],
+   [
+    "pet",
+    "dog"
+   ]
+  ],
+  [
+   "left_of",
+   [
+    "color",
+    "white"
+   ],
+   [
+    "pet",
+    "rabbit"
+   ]
+  ],
+  [
+   "next_to",
+   [
+    "color",
+    "green"
+   ],
+   [
+    "pet",
+    "cat"
+   ]
+  ],
+  [
+   "at",
+   [
+    "drink",
+    "water"
+   ],
+   4
+  ],
+  [
+   "next_to",
+   [
+    "name",
+    "Eve"
+   ],
+   [
+    "pet",
+    "dog"
+   ]
+  ],
+  [
+   "at",
+   [
+    "color",
+    "green"
+   ],
+   1
+  ],
+  [
+   "left_of",
+   [
+    "name",
+    "Frank"
+   ],
+   [
+    "drink",
+    "juice"
+   ]
+  ],
+  [
+   "next_to",
+   [
+    "pet",
+    "cat"
+   ],
+   [
+    "color",
+    "red"
+   ]
+  ]
+ ],
+ "solution": {
+  "name": [
+   "Alice",
+   "Frank",
+   "David",
+   "Eve"
+  ],
+  "color": [
+   "green",
+   "white",
+   "red",
+   "purple"
+  ],
+  "pet": [
+   "horse",
+   "cat",
+   "dog",
+   "rabbit"
+  ],
+  "drink": [
+   "coffee",
+   "tea",
+   "juice",
+   "water"
+  ]
+ },
+ "prompt": "There are 4 houses in a row, numbered 1 to 4 from left to right. Each house has exactly one resident. Every resident has one value for each attribute below, and no two residents share a value within an attribute.\n\nAttributes and their possible values:\n- name: Alice, David, Frank, Eve\n- color: green, purple, red, white\n- pet: cat, horse, rabbit, dog\n- drink: coffee, water, juice, tea\n\nClues:\n1. Frank does not live in house 1.\n2. Alice and the person whose pet is horse are the same person.\n3. The person whose favorite drink is tea and the person whose pet is dog live next to each other.\n4. The person whose favorite color is white lives somewhere to the left of the person whose pet is rabbit.\n5. The person whose favorite color is green and the person whose pet is cat live next to each other.\n6. The person whose favorite drink is water lives in house 4.\n7. Eve and the person whose pet is dog live next to each other.\n8. The person whose favorite color is green lives in house 1.\n9. Frank lives somewhere to the left of the person whose favorite drink is juice.\n10. The person whose pet is cat and the person whose favorite color is red live next to each other.\n\nDetermine which values belong to each house. Submit your answer as JSON with exactly these keys: {\"name\": [...], \"color\": [...], \"pet\": [...], \"drink\": [...]}. Each list has 4 entries, the value in house 1 first and the value in house 4 last."
+}

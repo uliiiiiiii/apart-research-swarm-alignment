@@ -1,0 +1,174 @@
+{
+ "id": "4x4_19",
+ "n_houses": 4,
+ "n_cats": 4,
+ "n_clues": 11,
+ "seed": "zebra-v1:4x4:19",
+ "categories": {
+  "name": [
+   "David",
+   "Carol",
+   "Frank",
+   "Bob"
+  ],
+  "color": [
+   "purple",
+   "white",
+   "yellow",
+   "green"
+  ],
+  "pet": [
+   "bird",
+   "cat",
+   "rabbit",
+   "horse"
+  ],
+  "drink": [
+   "coffee",
+   "water",
+   "juice",
+   "tea"
+  ]
+ },
+ "clues": [
+  [
+   "imm_left",
+   [
+    "color",
+    "white"
+   ],
+   [
+    "color",
+    "green"
+   ]
+  ],
+  [
+   "at",
+   [
+    "name",
+    "David"
+   ],
+   4
+  ],
+  [
+   "left_of",
+   [
+    "color",
+    "white"
+   ],
+   [
+    "pet",
+    "cat"
+   ]
+  ],
+  [
+   "left_of",
+   [
+    "name",
+    "Frank"
+   ],
+   [
+    "drink",
+    "tea"
+   ]
+  ],
+  [
+   "same",
+   [
+    "pet",
+    "rabbit"
+   ],
+   [
+    "drink",
+    "coffee"
+   ]
+  ],
+  [
+   "at",
+   [
+    "drink",
+    "coffee"
+   ],
+   3
+  ],
+  [
+   "next_to",
+   [
+    "name",
+    "Carol"
+   ],
+   [
+    "drink",
+    "coffee"
+   ]
+  ],
+  [
+   "same",
+   [
+    "drink",
+    "tea"
+   ],
+   [
+    "pet",
+    "horse"
+   ]
+  ],
+  [
+   "left_of",
+   [
+    "drink",
+    "coffee"
+   ],
+   [
+    "color",
+    "purple"
+   ]
+  ],
+  [
+   "left_of",
+   [
+    "color",
+    "green"
+   ],
+   [
+    "drink",
+    "water"
+   ]
+  ],
+  [
+   "at",
+   [
+    "color",
+    "green"
+   ],
+   2
+  ]
+ ],
+ "solution": {
+  "name": [
+   "Frank",
+   "Carol",
+   "Bob",
+   "David"
+  ],
+  "color": [
+   "white",
+   "green",
+   "yellow",
+   "purple"
+  ],
+  "pet": [
+   "bird",
+   "horse",
+   "rabbit",
+   "cat"
+  ],
+  "drink": [
+   "juice",
+   "tea",
+   "coffee",
+   "water"
+  ]
+ },
+ "prompt": "There are 4 houses in a row, numbered 1 to 4 from left to right. Each house has exactly one resident. Every resident has one value for each attribute below, and no two residents share a value within an attribute.\n\nAttributes and their possible values:\n- name: David, Carol, Frank, Bob\n- color: purple, white, yellow, green\n- pet: bird, cat, rabbit, horse\n- drink: coffee, water, juice, tea\n\nClues:\n1. The person whose favorite color is white lives directly to the left of the person whose favorite color is green.\n2. David lives in house 4.\n3. The person whose favorite color is white lives somewhere to the left of the person whose pet is cat.\n4. Frank lives somewhere to the left of the person whose favorite drink is tea.\n5. The person whose pet is rabbit and the person whose favorite drink is coffee are the same person.\n6. The person whose favorite drink is coffee lives in house 3.\n7. Carol and the person whose favorite drink is coffee live next to each other.\n8. The person whose favorite drink is tea and the person whose pet is horse are the same person.\n9. The person whose favorite drink is coffee lives somewhere to the left of the person whose favorite color is purple.\n10. The person whose favorite color is green lives somewhere to the left of the person whose favorite drink is water.\n11. The person whose favorite color is green lives in house 2.\n\nDetermine which values belong to each house. Submit your answer as JSON with exactly these keys: {\"name\": [...], \"color\": [...], \"pet\": [...], \"drink\": [...]}. Each list has 4 entries, the value in house 1 first and the value in house 4 last."
+}

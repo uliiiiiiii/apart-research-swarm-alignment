@@ -1,0 +1,163 @@
+{
+ "id": "4x4_14",
+ "n_houses": 4,
+ "n_cats": 4,
+ "n_clues": 10,
+ "seed": "zebra-v1:4x4:14",
+ "categories": {
+  "name": [
+   "David",
+   "Alice",
+   "Bob",
+   "Frank"
+  ],
+  "color": [
+   "blue",
+   "purple",
+   "white",
+   "red"
+  ],
+  "pet": [
+   "fish",
+   "rabbit",
+   "cat",
+   "dog"
+  ],
+  "drink": [
+   "milk",
+   "juice",
+   "water",
+   "tea"
+  ]
+ },
+ "clues": [
+  [
+   "imm_left",
+   [
+    "drink",
+    "juice"
+   ],
+   [
+    "pet",
+    "fish"
+   ]
+  ],
+  [
+   "same",
+   [
+    "drink",
+    "water"
+   ],
+   [
+    "color",
+    "purple"
+   ]
+  ],
+  [
+   "imm_left",
+   [
+    "pet",
+    "fish"
+   ],
+   [
+    "pet",
+    "cat"
+   ]
+  ],
+  [
+   "left_of",
+   [
+    "color",
+    "blue"
+   ],
+   [
+    "color",
+    "white"
+   ]
+  ],
+  [
+   "left_of",
+   [
+    "name",
+    "Frank"
+   ],
+   [
+    "name",
+    "David"
+   ]
+  ],
+  [
+   "not_at",
+   [
+    "drink",
+    "milk"
+   ],
+   3
+  ],
+  [
+   "at",
+   [
+    "pet",
+    "cat"
+   ],
+   4
+  ],
+  [
+   "same",
+   [
+    "name",
+    "David"
+   ],
+   [
+    "color",
+    "blue"
+   ]
+  ],
+  [
+   "left_of",
+   [
+    "pet",
+    "dog"
+   ],
+   [
+    "pet",
+    "rabbit"
+   ]
+  ],
+  [
+   "at",
+   [
+    "name",
+    "Alice"
+   ],
+   1
+  ]
+ ],
+ "solution": {
+  "name": [
+   "Alice",
+   "Frank",
+   "David",
+   "Bob"
+  ],
+  "color": [
+   "purple",
+   "red",
+   "blue",
+   "white"
+  ],
+  "pet": [
+   "dog",
+   "rabbit",
+   "fish",
+   "cat"
+  ],
+  "drink": [
+   "water",
+   "juice",
+   "tea",
+   "milk"
+  ]
+ },
+ "prompt": "There are 4 houses in a row, numbered 1 to 4 from left to right. Each house has exactly one resident. Every resident has one value for each attribute below, and no two residents share a value within an attribute.\n\nAttributes and their possible values:\n- name: David, Alice, Bob, Frank\n- color: blue, purple, white, red\n- pet: fish, rabbit, cat, dog\n- drink: milk, juice, water, tea\n\nClues:\n1. The person whose favorite drink is juice lives directly to the left of the person whose pet is fish.\n2. The person whose favorite drink is water and the person whose favorite color is purple are the same person.\n3. The person whose pet is fish lives directly to the left of the person whose pet is cat.\n4. The person whose favorite color is blue lives somewhere to the left of the person whose favorite color is white.\n5. Frank lives somewhere to the left of David.\n6. The person whose favorite drink is milk does not live in house 3.\n7. The person whose pet is cat lives in house 4.\n8. David and the person whose favorite color is blue are the same person.\n9. The person whose pet is dog lives somewhere to the left of the person whose pet is rabbit.\n10. Alice lives in house 1.\n\nDetermine which values belong to each house. Submit your answer as JSON with exactly these keys: {\"name\": [...], \"color\": [...], \"pet\": [...], \"drink\": [...]}. Each list has 4 entries, the value in house 1 first and the value in house 4 last."
+}

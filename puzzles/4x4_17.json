@@ -1,0 +1,185 @@
+{
+ "id": "4x4_17",
+ "n_houses": 4,
+ "n_cats": 4,
+ "n_clues": 12,
+ "seed": "zebra-v1:4x4:17",
+ "categories": {
+  "name": [
+   "Alice",
+   "Carol",
+   "David",
+   "Frank"
+  ],
+  "color": [
+   "purple",
+   "white",
+   "red",
+   "yellow"
+  ],
+  "pet": [
+   "bird",
+   "rabbit",
+   "horse",
+   "fish"
+  ],
+  "drink": [
+   "tea",
+   "coffee",
+   "juice",
+   "soda"
+  ]
+ },
+ "clues": [
+  [
+   "at",
+   [
+    "color",
+    "yellow"
+   ],
+   4
+  ],
+  [
+   "next_to",
+   [
+    "color",
+    "purple"
+   ],
+   [
+    "name",
+    "Frank"
+   ]
+  ],
+  [
+   "same",
+   [
+    "pet",
+    "bird"
+   ],
+   [
+    "color",
+    "red"
+   ]
+  ],
+  [
+   "next_to",
+   [
+    "color",
+    "yellow"
+   ],
+   [
+    "color",
+    "purple"
+   ]
+  ],
+  [
+   "imm_left",
+   [
+    "drink",
+    "soda"
+   ],
+   [
+    "name",
+    "David"
+   ]
+  ],
+  [
+   "same",
+   [
+    "drink",
+    "soda"
+   ],
+   [
+    "color",
+    "red"
+   ]
+  ],
+  [
+   "not_at",
+   [
+    "name",
+    "Carol"
+   ],
+   2
+  ],
+  [
+   "left_of",
+   [
+    "drink",
+    "tea"
+   ],
+   [
+    "name",
+    "Carol"
+   ]
+  ],
+  [
+   "not_same",
+   [
+    "name",
+    "Alice"
+   ],
+   [
+    "pet",
+    "rabbit"
+   ]
+  ],
+  [
+   "same",
+   [
+    "color",
+    "purple"
+   ],
+   [
+    "drink",
+    "coffee"
+   ]
+  ],
+  [
+   "next_to",
+   [
+    "pet",
+    "fish"
+   ],
+   [
+    "name",
+    "Carol"
+   ]
+  ],
+  [
+   "not_at",
+   [
+    "color",
+    "red"
+   ],
+   1
+  ]
+ ],
+ "solution": {
+  "name": [
+   "Alice",
+   "Frank",
+   "David",
+   "Carol"
+  ],
+  "color": [
+   "white",
+   "red",
+   "purple",
+   "yellow"
+  ],
+  "pet": [
+   "horse",
+   "bird",
+   "fish",
+   "rabbit"
+  ],
+  "drink": [
+   "tea",
+   "soda",
+   "coffee",
+   "juice"
+  ]
+ },
+ "prompt": "There are 4 houses in a row, numbered 1 to 4 from left to right. Each house has exactly one resident. Every resident has one value for each attribute below, and no two residents share a value within an attribute.\n\nAttributes and their possible values:\n- name: Alice, Carol, David, Frank\n- color: purple, white, red, yellow\n- pet: bird, rabbit, horse, fish\n- drink: tea, coffee, juice, soda\n\nClues:\n1. The person whose favorite color is yellow lives in house 4.\n2. The person whose favorite color is purple and Frank live next to each other.\n3. The person whose pet is bird and the person whose favorite color is red are the same person.\n4. The person whose favorite color is yellow and the person whose favorite color is purple live next to each other.\n5. The person whose favorite drink is soda lives directly to the left of David.\n6. The person whose favorite drink is soda and the person whose favorite color is red are the same person.\n7. Carol does not live in house 2.\n8. The person whose favorite drink is tea lives somewhere to the left of Carol.\n9. Alice and the person whose pet is rabbit are not the same person.\n10. The person whose favorite color is purple and the person whose favorite drink is coffee are the same person.\n11. The person whose pet is fish and Carol live next to each other.\n12. The person whose favorite color is red does not live in house 1.\n\nDetermine which values belong to each house. Submit your answer as JSON with exactly these keys: {\"name\": [...], \"color\": [...], \"pet\": [...], \"drink\": [...]}. Each list has 4 entries, the value in house 1 first and the value in house 4 last."
+}

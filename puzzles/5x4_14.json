@@ -1,0 +1,201 @@
+{
+ "id": "5x4_14",
+ "n_houses": 5,
+ "n_cats": 4,
+ "n_clues": 13,
+ "seed": "zebra-v1:5x4:14",
+ "categories": {
+  "name": [
+   "Alice",
+   "Carol",
+   "Bob",
+   "David",
+   "Frank"
+  ],
+  "color": [
+   "yellow",
+   "red",
+   "white",
+   "purple",
+   "green"
+  ],
+  "pet": [
+   "horse",
+   "bird",
+   "rabbit",
+   "dog",
+   "cat"
+  ],
+  "drink": [
+   "tea",
+   "milk",
+   "soda",
+   "juice",
+   "water"
+  ]
+ },
+ "clues": [
+  [
+   "left_of",
+   [
+    "drink",
+    "tea"
+   ],
+   [
+    "drink",
+    "water"
+   ]
+  ],
+  [
+   "left_of",
+   [
+    "name",
+    "Bob"
+   ],
+   [
+    "color",
+    "yellow"
+   ]
+  ],
+  [
+   "at",
+   [
+    "name",
+    "David"
+   ],
+   5
+  ],
+  [
+   "at",
+   [
+    "pet",
+    "cat"
+   ],
+   3
+  ],
+  [
+   "next_to",
+   [
+    "pet",
+    "cat"
+   ],
+   [
+    "color",
+    "yellow"
+   ]
+  ],
+  [
+   "imm_left",
+   [
+    "name",
+    "Carol"
+   ],
+   [
+    "color",
+    "white"
+   ]
+  ],
+  [
+   "next_to",
+   [
+    "name",
+    "Frank"
+   ],
+   [
+    "pet",
+    "horse"
+   ]
+  ],
+  [
+   "same",
+   [
+    "name",
+    "Alice"
+   ],
+   [
+    "drink",
+    "juice"
+   ]
+  ],
+  [
+   "same",
+   [
+    "drink",
+    "water"
+   ],
+   [
+    "color",
+    "yellow"
+   ]
+  ],
+  [
+   "same",
+   [
+    "name",
+    "Frank"
+   ],
+   [
+    "pet",
+    "dog"
+   ]
+  ],
+  [
+   "at",
+   [
+    "pet",
+    "rabbit"
+   ],
+   5
+  ],
+  [
+   "same",
+   [
+    "drink",
+    "milk"
+   ],
+   [
+    "color",
+    "purple"
+   ]
+  ],
+  [
+   "at",
+   [
+    "color",
+    "red"
+   ],
+   5
+  ]
+ ],
+ "solution": {
+  "name": [
+   "Bob",
+   "Frank",
+   "Carol",
+   "Alice",
+   "David"
+  ],
+  "color": [
+   "green",
+   "yellow",
+   "purple",
+   "white",
+   "red"
+  ],
+  "pet": [
+   "horse",
+   "dog",
+   "cat",
+   "bird",
+   "rabbit"
+  ],
+  "drink": [
+   "tea",
+   "water",
+   "milk",
+   "juice",
+   "soda"
+  ]
+ },
+ "prompt": "There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has exactly one resident. Every resident has one value for each attribute below, and no two residents share a value within an attribute.\n\nAttributes and their possible values:\n- name: Alice, Carol, Bob, David, Frank\n- color: yellow, red, white, purple, green\n- pet: horse, bird, rabbit, dog, cat\n- drink: tea, milk, soda, juice, water\n\nClues:\n1. The person whose favorite drink is tea lives somewhere to the left of the person whose favorite drink is water.\n2. Bob lives somewhere to the left of the person whose favorite color is yellow.\n3. David lives in house 5.\n4. The person whose pet is cat lives in house 3.\n5. The person whose pet is cat and the person whose favorite color is yellow live next to each other.\n6. Carol lives directly to the left of the person whose favorite color is white.\n7. Frank and the person whose pet is horse live next to each other.\n8. Alice and the person whose favorite drink is juice are the same person.\n9. The person whose favorite drink is water and the person whose favorite color is yellow are the same person.\n10. Frank and the person whose pet is dog are the same person.\n11. The person whose pet is rabbit lives in house 5.\n12. The person whose favorite drink is milk and the person whose favorite color is purple are the same person.\n13. The person whose favorite color is red lives in house 5.\n\nDetermine which values belong to each house. Submit your answer as JSON with exactly these keys: {\"name\": [...], \"color\": [...], \"pet\": [...], \"drink\": [...]}. Each list has 5 entries, the value in house 1 first and the value in house 5 last."
+}
